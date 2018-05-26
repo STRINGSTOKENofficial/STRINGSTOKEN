@@ -12,8 +12,8 @@ contract Owned {
         require(msg.sender == currentAdmin);
         _;
     }
-	
-	//オーナー権譲渡
+    
+    //オーナー権譲渡
     function _changeAdmin(address newAdmin) public onlyAdmin {
         require(newAdmin != address(0));                  
         currentAdmin = newAdmin;                           
